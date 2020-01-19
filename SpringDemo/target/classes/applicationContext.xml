@@ -1,0 +1,35 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- <bean id="employee" class="com.ram.model.Employee">
+		<property name="id" value="100"></property>
+		<property name="name" value="Peter"></property>
+	</bean>  -->
+
+<!-- <bean id="employee2" class="com.ram.model.Employee2" init-method="init" destroy-method="cleanUp">
+		<property name="id" value="100"></property>
+		<property name="name" value="Peter"></property>
+	</bean>  -->
+	
+	<bean id="employee3" class="com.ram.model.Employee3">
+		<property name="id" value="100"></property>
+		<property name="name" value="Peter"></property>
+	</bean>
+	<context:annotation-config></context:annotation-config>
+	
+	<!-- <bean id="employee4" class="com.ram.model.Employee4">
+		<property name="name" value="Peter" />
+	</bean> -->
+
+	<!-- <bean id="fruit" class="com.ram.model.Fruit">
+		<property name="name" value="Apple" />
+	</bean>
+ -->
+	<!-- This post processor methods are called for every bean -->
+	<!-- <bean class="com.ram.postprocessor.MyBeanPostProcessor" /> -->
+</beans>
