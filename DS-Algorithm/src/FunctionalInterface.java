@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -72,14 +74,34 @@ public class FunctionalInterface {
 //		
 //		consumer1.andThen(consumer2).accept("Hello");
 		
-		Supplier<String>supplier1 = () -> {
-			return "Hello World";
-		};
-		System.out.println(supplier1.get());
-		Supplier<Number>supplier2 = () ->{
-			return 40;
-		};
-		System.out.println(supplier2.get());
+//		Supplier<String>supplier1 = () -> {
+//			return "Hello World";
+//		};
+//		System.out.println(supplier1.get());
+//		Supplier<Number>supplier2 = () ->{
+//			return 40;
+//		};
+//		System.out.println(supplier2.get());
+		
+		
+//		String sql = "Book_1_2020";
+//		System.err.println("Before Modifying SQL =" + sql);
+//	   Calendar calendar = Calendar.getInstance();
+//	   int month = calendar.get(Calendar.MONTH) + 1;
+//	   int year = calendar.get(Calendar.YEAR);
+//	   String tableName = "Book_" + month + "_" + year;
+//	   sql = sql.replace("Book_1_2020", tableName);
+//	   System.err.println("After Modifying SQL =" + sql);
+		
+
+		String sql = "Book_1_2020";
+		System.err.println("Before Modifying SQL =" + sql);
+		LocalDate date = LocalDate.now();
+	   int month = date.getMonthValue() + 1;
+	   int year = date.getYear();
+	   String tableName = "Book_" + month + "_" + year;
+	   sql = sql.replace("Book_1_2020", tableName);
+	   System.err.println("After Modifying SQL =" + sql);
 	}
 
 }

@@ -35,5 +35,8 @@ public class FunctionDemo {
 		int b = function1.compose(function2).apply(50);
 		System.out.println(b);
 		
+		Function<String,Boolean>test = i -> i.isEmpty();
+		System.out.println(test.apply("d"));
+		
 	}
 }
