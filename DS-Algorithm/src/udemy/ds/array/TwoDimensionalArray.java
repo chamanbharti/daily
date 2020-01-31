@@ -1,4 +1,4 @@
-package array;
+package udemy.ds.array;
 
 public class TwoDimensionalArray {
 	int arr[][] = null;
